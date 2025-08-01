@@ -35,8 +35,8 @@ export function UserLogin(){
     })
 
   return(
-    <div>
-       <form className='p-4 bg-white text-dark ms-3 rounded mt-4' onSubmit={formik.handleSubmit} style={{width:'250px'}}>
+    <div className='d-flex justify-content-center  mx-4 '>
+       <form className='p-4 bg-warning text-dark ms-3 rounded mt-4' onSubmit={formik.handleSubmit} style={{width:'300px'}}>
             <dl >
             <h2 className='bi bi-person-fill'>User Login</h2>
               <dt>User Id</dt>  

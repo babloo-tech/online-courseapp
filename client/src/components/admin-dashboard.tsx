@@ -48,7 +48,7 @@ export function AdminDashboard(){
               <tbody>
                   {
                      videos?.map(video=><tr key={video.video_id}>
-                        <td className="ps-4">{video.title}</td>
+                        <td className="ps-4 fw-bold">{video.title}</td>
                          <td>
                           <iframe src={video.url} width="200"  height="100"></iframe>
                          </td>

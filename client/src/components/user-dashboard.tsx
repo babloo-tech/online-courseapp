@@ -42,15 +42,15 @@ export function UserDashboard() {
   return (
     <div>
       
-      <header className="d-flex justify-content-between p-2 position-sticky z-1 top-0 ">
-        <h3 className="mt-4 bi bi-person-fill">{cookie['userid']}-Dashboard</h3>
+      <header className="d-flex justify-content-between p-2 fixed-top ">
+        <h4 className="mt-4 ms-2 bi bi-person-fill">{cookie['userid']}-Dashboard</h4>
         <button
-          style={{ marginLeft: '1000px' }}
+          style={{ marginLeft: '1050px' }}
           type="submit"
           onClick={UserSignout}
           className="btn tbn-link btn-lg"
         >
-          <img src="./logout.jpg" width="50" height="50" />
+          <img src="./logout.jpg" width="40" height="40" className='mt-2' />
         </button>
         <h2 className="mt-3 ">
           <span className="bi bi-cart4 me-4">
@@ -58,10 +58,10 @@ export function UserDashboard() {
           </span>
         </h2>
       </header>
-      <section className=" z-0 d-flex flex-wrap gap-3 ms-4 ">
+      <section className=" z-0 d-flex flex-wrap gap-0 justify-content-evenly mt-5 mx-4">
         {videos?.map((video) => (
-          <div key={video.category_id} className="card m-2 " style={{ width: '300px' }}>
-            <iframe src={video.url} height="200" width="300"></iframe>
+          <div key={video.category_id} className="card m-2 " style={{ maxWidth: '340px' }}>
+            <iframe src={video.url} height="200" w-100 className='rounded '></iframe>
             <div className="card-header text-center">
               <h2>{video.title}</h2>
             </div>
