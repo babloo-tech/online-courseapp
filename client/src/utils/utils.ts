@@ -1,1 +1,1 @@
-export const BACKEND_URL:string="http://localhost:5050"
+export const BACKEND_URL:string="https://course-app-nn6j.onrender.com"
