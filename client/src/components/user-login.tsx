@@ -6,7 +6,7 @@ import { useCookies } from 'react-cookie'
 export function UserLogin(){
 
   let navigate=useNavigate()
-  const [cookie,setCookie, removeCookie]=useCookies(['userid'])
+  const [,setCookie,]=useCookies(['userid'])
 
   const formik=useFormik({
        initialValues:{

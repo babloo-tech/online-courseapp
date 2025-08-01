@@ -4,15 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 import  { VideoContract } from '../contracts/VideoContract'
 import axios from 'axios'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, } from 'react-redux'
 import { addToSavedList } from '../slicers/video-slicer'
 import store from '../store/store'
 import './cart.css'
 
 export function UserDashboard() {
-  const videosCount = useSelector((state: any) => state.videos.videosCount)
   let dispatch = useDispatch()
-  const [cookie, setCookie, removeCookie] = useCookies(['userid'])
+  const [cookie, ,removeCookie] = useCookies(['userid'])
   let navigate = useNavigate()
 
   const [videos, setVideos] = useState<VideoContract[]>()

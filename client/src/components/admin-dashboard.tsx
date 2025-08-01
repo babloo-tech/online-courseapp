@@ -6,7 +6,7 @@ import { useNavigate , Link} from "react-router-dom"
 import type { VideoContract } from "../contracts/VideoContract"
 import axios from "axios"
 export function AdminDashboard(){
-  const[cookie,setCookie,removeCookie]=useCookies(['admin_id'])
+  const[ , ,removeCookie]=useCookies(['admin_id'])
 
   let navigate=useNavigate()
 
