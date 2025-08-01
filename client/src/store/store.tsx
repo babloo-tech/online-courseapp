@@ -1,5 +1,4 @@
 
-
 import  { configureStore }  from  "@reduxjs/toolkit";
 import  videoSlice from  "../slicers/video-slicer";
 
