@@ -20,8 +20,17 @@
     }
 }
 
-@media(max-width:600) {
+@media(max-width:600px) {
   #font-f1{
     display: none;
+  }
+}
+
+@media(max-width:770px) {
+  #log{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top:4px;
   }
 }

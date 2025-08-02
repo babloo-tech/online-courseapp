@@ -44,21 +44,19 @@ export function UserDashboard() {
   return (
     <div>
       
-      <header className="d-flex justify-content-between p-2 fixed-top ">
-        <h4 className="mt-4 ms-2 bi bi-person-fill">{cookie['userid']}-Dashboard</h4>
-        <button
-          style={{ marginLeft: '1050px' }}
-          type="submit"
-          onClick={UserSignout}
-          className="btn tbn-link btn-lg"
-        >
-          <img src="./logout.jpg" width="40" height="40" className='mt-2' />
+      <header className="d-flex justify-content-between p-2 fixed-top   ">
+        <h4 id='head-manage' className="mt-4 ms-2 bi bi-person-fill ">{cookie['userid']}-Dashboard</h4>
+        <div> <button style={{ marginLeft: '1050px' }} type="submit" onClick={UserSignout} className="btn tbn-link btn-lg">
+          <img id='logout-set' src="./logout.jpg" width="40" height="40" className='mt-2' />
         </button>
+        </div>
+         
         <h2 className="mt-3 ">
-          <span className="bi bi-cart4 me-4">
+          <span className="bi bi-cart4 ">
             {store.getState().videosCount}
           </span>
         </h2>
+    
       </header>
       <section className=" z-0 d-flex flex-wrap gap-0 justify-content-evenly mt-5 mx-4">
         {videos?.map((video) => (

@@ -1,5 +1,30 @@
-  @media (max-width: 768px) {
+  @media (max-width: 860px) {
     header h4 {
       display: none;
     }
   }
+
+  @media(max-width:1300px) {
+     #head-manage{
+      font-size: 20px;
+      position:absolute;
+    
+     }
+  }
+
+  @media(max-width:870) {
+    #head-manage{
+      display: none;
+    }
+  }
+
+  @media(max-width:1100px) {
+    #logout-set{
+      position: absolute;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      padding:2px;
+    }
+  }
+  
