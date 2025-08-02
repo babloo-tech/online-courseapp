@@ -66,19 +66,19 @@ let params=useParams()
       <form onSubmit={formik.handleSubmit}>
         <dl className='row'>
         <dt className='col-4'>Video Id</dt>
-        <dd className='col-8'><input className='form-control' type="number" value={formik.values.category_id} name='video_id' onChange={formik.handleChange} /></dd>
+        <dd className='col-8'><input required className='form-control' type="number" value={formik.values.category_id} name='video_id' onChange={formik.handleChange} /></dd>
         <dt className='col-4'>Title</dt>
-        <dd  className='col-8'><input className='form-control' type="text" value={formik.values.title} name='title' onChange={formik.handleChange} /></dd>
+        <dd  className='col-8'><input required className='form-control' type="text" value={formik.values.title} name='title' onChange={formik.handleChange} /></dd>
         <dt  className='col-4'>Description</dt>
-        <dd  className='col-8'><input className='form-control' type="text" value={formik.values.description} name='description' onChange={formik.handleChange}/></dd>
+        <dd  className='col-8'><input required className='form-control' type="text" value={formik.values.description} name='description' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Comments</dt>
-        <dd  className='col-8'><input className='form-control' type="text"name='comments' value={formik.values.comments} onChange={formik.handleChange} /></dd>
+        <dd  className='col-8'><input required className='form-control' type="text"name='comments' value={formik.values.comments} onChange={formik.handleChange} /></dd>
         <dt  className='col-4'>Likes</dt>
-        <dd  className='col-8'><input className='form-control' type="number" value={formik.values.likes}  name='likes' onChange={formik.handleChange}/></dd>
+        <dd  className='col-8'><input required className='form-control' type="number" value={formik.values.likes}  name='likes' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Views</dt>
-        <dd  className='col-8'><input className='form-control' type="number"name='views' value={formik.values.views} onChange={formik.handleChange}/></dd>
+        <dd  className='col-8'><input required className='form-control' type="number"name='views' value={formik.values.views} onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Urls</dt>
-        <dd  className='col-8'><input className='form-control' type="text"  value={formik.values.url} name='url' onChange={formik.handleChange}/></dd>
+        <dd  className='col-8'><input required className='form-control' type="text"  value={formik.values.url} name='url' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Category </dt>
         <dd className='col-8'>
            <select onChange={formik.handleChange} className='form-select' name='category_id' value={formik.values.category_id} >

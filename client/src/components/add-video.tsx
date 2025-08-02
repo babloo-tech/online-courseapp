@@ -43,9 +43,9 @@ export function AddVideo(){
       <form onSubmit={formik.handleSubmit}>
         <dl className='row'>
         <dt className='col-4'>Video Id</dt>
-        <dd className='col-8'><input className='form-control ' type="number" name='video_id' onChange={formik.handleChange} /></dd>
+        <dd className='col-8'><input required className='form-control ' type="number" name='video_id' onChange={formik.handleChange} /></dd>
         <dt className='col-4'>Title</dt>
-        <dd  className='col-8'><input className='form-control' type="text" name='title' onChange={formik.handleChange} /></dd>
+        <dd  className='col-8'><input required className='form-control' type="text" name='title' onChange={formik.handleChange} /></dd>
         <dt  className='col-4'>Description</dt>
         <dd  className='col-8'><input className='form-control ' type="text" name='description' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Comments</dt>
@@ -55,7 +55,7 @@ export function AddVideo(){
         <dt  className='col-4'>Views</dt>
         <dd  className='col-8'><input className='form-control ' type="number"name='views' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Urls</dt>
-        <dd  className='col-8'><input className='form-control ' type="text"  name='url' onChange={formik.handleChange}/></dd>
+        <dd  className='col-8'><input required className='form-control ' type="text"  name='url' onChange={formik.handleChange}/></dd>
         <dt  className='col-4'>Category </dt>
         <dd className='col-8 '>
            <select name='category_id' className='form-select' onChange={formik.handleChange}>

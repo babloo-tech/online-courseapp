@@ -1,0 +1,27 @@
+@media(max-width:768px) {
+  
+
+  #main-title{
+    font-size: 15px;
+    color:rgb(77, 77, 187);
+  }
+  #btn-control{
+    margin-left:9px;
+    margin-bottom:12px
+  }
+    #head-h h3 {
+     display: none;
+    }
+    #btn-b img{
+    width: 25px;
+    height:25px;
+    margin-top: 20px;
+    margin-right: 40px;
+    }
+}
+
+@media(max-width:600) {
+  #font-f1{
+    display: none;
+  }
+}
