@@ -10,6 +10,7 @@ import { AdminDashboard } from './components/admin-dashboard'
 import { AddVideo } from './components/add-video'
 import { EditVideo } from './components/edit-video'
 import { DeleteVideo } from './components/delete-video'
+import './App.css'
 
 function App() {
  
@@ -18,7 +19,7 @@ function App() {
     <div>
       <BrowserRouter>
        <Link to={'/'} className='text-decoration-none'><header className='bg-primary p-3 text-center position-sticky top-0 z-1'>
-          <h1 style={{fontSize:'45px'}} className='text-white text-decoration-none bi bi-person-video'> Online Video Library</h1>
+          <h1 className='  p-2 text-white fw-bold text-decoration-none bi bi-person-video font-manage'> Online Video Application</h1>
        </header></Link>
        <section>
            <Routes>

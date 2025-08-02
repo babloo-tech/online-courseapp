@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useDispatch, } from 'react-redux'
 import { addToSavedList } from '../slicers/video-slicer'
 import store from '../store/store'
+import './user-dashboard.css'
 import './cart.css'
 
 export function UserDashboard() {

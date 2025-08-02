@@ -32,8 +32,8 @@ export function AdminDashboard(){
   return(
     <div className="p-3 z-2">
          <header className="d-flex justify-content-between fixed-top p-4">
-         <h2>Admin Dashboard</h2>
-         <button className="btn btn-li btn-lg text-decoration-none" onClick={handeleSignout}><img src="logout.jpg" width='50' height='50'/></button>
+         <h2><span className="bi bi-lock bg-danger rounded-3 px-2"></span> Admin Dashboard</h2>
+         <button className="btn  btn-lg text-decoration-none" onClick={handeleSignout}><img src="logout.jpg" width='50' height='40' /></button>
          </header>
          <section className="fs-5 ">
           <Link to="/add-video" className="btn btn-warning btn-lg bi bi-camera-video"> Add New Video</Link>
@@ -42,7 +42,7 @@ export function AdminDashboard(){
                   <tr>
                      <th className="ps-5 fs-2">Title</th>
                      <th className="ps-5 fs-2">Preview</th>
-                     <th className="ps-4 fs">Actions</th>
+                     <th className="ps-4 fs-2">Actions</th>
                   </tr>
               </thead>
               <tbody>

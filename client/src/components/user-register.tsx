@@ -63,16 +63,16 @@ const[color,setColor]=useState('')
         <dl >
         <h2 className='bi bi-person-fill p-2 rounded-4 '>User Register</h2>
           <dt>User Id</dt>
-          <dd><input type="text"  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
+          <dd><input type="text" required  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
           <dd className={color}>{userMsg}</dd>
           <dt>User Name</dt>
-          <dd><input type="text"  className='form-control' onChange={formik.handleChange}  name='user_name'/></dd>
+          <dd><input type="text" required className='form-control' onChange={formik.handleChange}  name='user_name'/></dd>
           <dt>Password</dt>
-          <dd><input type="password"  className='form-control' onChange={formik.handleChange}  name='password'/></dd>
+          <dd><input type="password" required  className='form-control' onChange={formik.handleChange}  name='password'/></dd>
           <dt>Email</dt>
-          <dd><input type="text"  className='form-control' onChange={formik.handleChange}  name='email'/></dd>
+          <dd><input type="email" required className='form-control' onChange={formik.handleChange}  name='email'/></dd>
           <dt>Mobile</dt>
-          <dd><input type="text"  className='form-control' onChange={formik.handleChange}  name='mobile'/></dd>
+          <dd><input type="text" required  className='form-control' onChange={formik.handleChange}  name='mobile'/></dd>
         </dl>
         <button className='btn btn-primary mb-2' >Register</button>
         <div>
