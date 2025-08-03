@@ -38,22 +38,23 @@ export function AdminDashboard(){
          </header>
          <section className="fs-5  ">
           <Link to="/add-video" className="btn btn-warning btn-lg bi bi-camera-video "> Add New Video</Link>
-            <table className="table table-hover pe-4 p-4">
+          <div>
+            <table className="table table-dark table-striped table-bordered table-hover pe-4 p-4">
               <thead>
-                  <tr>
+                  <tr >
                      <th className="ps-5 fs-2">Title</th>
                      <th className="ps-5 fs-2">Preview</th>
                      <th className="ps-4 fs-2">Actions</th>
                   </tr>
               </thead>
               <tbody>
-                  {
+                  {  
                      videos?.map(video=><tr key={video.video_id}>
                         <td id='main-title' className="ps-4 fw-bold">{video.title}</td>
                          <td>
-                          <iframe src={video.url} width="200"  height="100"></iframe>
+                          <iframe id="size" src={video.url} width="250"  height="150"></iframe>
                          </td>
-                         <td>,
+                         <td>
                           <Link to={`/edit-video/${video.video_id}`} id="btn-control" className="btn btn-warning "><span className="bi bi-pen-fill "></span></Link>
                           <Link to={`/delete-video/${video.video_id}`} className="btn btn-danger mx-3"><span className="bi bi-trash-fill"></span></Link>
                          </td>
@@ -61,6 +62,7 @@ export function AdminDashboard(){
                   }
               </tbody>
             </table>
+            </div>
          </section>
     </div>
   )

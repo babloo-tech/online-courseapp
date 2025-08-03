@@ -18,6 +18,7 @@
     }
   }
 
+
   @media(max-width:1100px) {
     #logout-set{
       position: absolute;
@@ -27,4 +28,11 @@
       padding:2px;
     }
   }
+
+ #pics:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+    }
+  
   

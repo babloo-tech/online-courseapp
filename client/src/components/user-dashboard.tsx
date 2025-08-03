@@ -60,22 +60,22 @@ export function UserDashboard() {
       </header>
       <section className=" z-0 d-flex flex-wrap gap-0 justify-content-evenly mt-5 mx-4">
         {videos?.map((video) => (
-          <div key={video.category_id} className="card m-2 " style={{ maxWidth: '340px' }}>
-            <iframe src={video.url} height="200" w-100 className='rounded '></iframe>
+          <div  key={video.category_id} className="card m-2 " style={{ maxWidth: '340px' }}>
+            <iframe  src={video.url} height="200" w-100 className='rounded '></iframe>
             <div className="card-header text-center">
               <h2>{video.title}</h2>
             </div>
-            <div className="card-body text-center ">{video.description}</div>
+            <div  className="card-body text-center ">{video.description}</div>
             <div className="card-footer">
-              <span className="bi bi-hand-thumbs-up ms-5">{video.likes}</span>
+              <span style={{marginLeft:'75px'}} className="bi bi-hand-thumbs-up ">{video.likes}</span>
               <span className="bi bi-eye mx-4"> {video.views}</span>
               {/* <button  onClick={()=>{handleSaveClick(video)}} className="btn btn-success bi bi-floppy mx-5 
                    mt-1 "> Watch Later</button> */}
               <button
                 onClick={() => handleSaveClick(video)}
-                className="btn btn-success mx-5 mt-1"
+                className="btn btn-success  mt-1" style={{marginLeft:'75px'}}
               >
-                <i className="bi bi-floppy me-2"></i>
+                <span  className="bi bi-floppy me-2"></span>
                 Watch Later
               </button>
             </div>

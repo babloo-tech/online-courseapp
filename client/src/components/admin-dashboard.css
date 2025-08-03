@@ -3,10 +3,9 @@
 
   #main-title{
     font-size: 15px;
-    color:rgb(77, 77, 187);
   }
   #btn-control{
-    margin-left:9px;
+    margin-left:15px;
     margin-bottom:12px
   }
     #head-h h3 {
@@ -32,5 +31,12 @@
     right: 0;
     top: 0;
     padding-top:4px;
+  }
+}
+
+@media(max-width:500px) {
+  #size{
+   width: 150px;
+   height:100px;
   }
 }

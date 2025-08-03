@@ -40,7 +40,7 @@ export function DeleteVideo(){
         <dd>{videos[0].title}</dd>
         <dt style={{marginLeft:'120px'}} className='mb-3 fs-4'>Preview</dt>
         <dd>
-           <iframe src={videos[0].url} width={300} height={200} ></iframe>
+           <iframe  src={videos[0].url} width={260} height={200} ></iframe>
         </dd>
       </dl>
       <button onClick={handleDeleteClik} type='submit' className='btn btn-warning mx-2'>Delete</button>

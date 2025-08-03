@@ -34,9 +34,9 @@ export function AdminLogin(){
         <dl>
         <h2 className="bi bi-person-fill">Admin Login</h2>
           <dt>User Id</dt>
-          <dd><input type="text" className="form-control" onChange={formik.handleChange} name="admin_id" /></dd>
+          <dd><input placeholder='Enter id' required type="text" className="form-control" onChange={formik.handleChange} name="admin_id" /></dd>
           <dt>Password</dt>
-          <dd><input type="password" className="form-control" onChange={formik.handleChange} name="password" /></dd>
+          <dd><input placeholder='Enter password' required type="password" className="form-control" onChange={formik.handleChange} name="password" /></dd>
         </dl>
         <button type="submit" className="btn btn-primary">Login</button>
        </form>
