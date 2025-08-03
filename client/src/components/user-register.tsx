@@ -63,7 +63,7 @@ const[color,setColor]=useState('')
         <dl >
         <h2 className='bi bi-person-fill p-2 rounded-4 '>User Register</h2>
           <dt>User Id</dt>
-          <dd><input placeholder='Enter id' type="text" required  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
+          <dd><input placeholder='Enter id....' type="text" required  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
           <dd className={color}>{userMsg}</dd>
           <dt>User Name</dt>
           <dd><input placeholder='Enter name' type="text" required className='form-control' onChange={formik.handleChange}  name='user_name'/></dd>

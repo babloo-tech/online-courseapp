@@ -40,9 +40,9 @@ export function UserLogin(){
             <dl >
             <h2 className='bi bi-person-fill'>User Login</h2>
               <dt>User Id</dt>  
-              <dd><input placeholder='Enter Registerd id' required type="text" className='form-control'  name='user_id' onChange={formik.handleChange} /></dd>
+              <dd><input  required type="text" className='form-control'  name='user_id' onChange={formik.handleChange} /></dd>
               <dt>Password</dt>
-              <dd><input placeholder='Enter Registerd password' required type="password" className='form-control' name='password' onChange={formik.handleChange} /></dd>
+              <dd><input  required type="password" className='form-control' name='password' onChange={formik.handleChange} /></dd>
             </dl>
             <button type='submit' className="btn btn-primary">Login</button>
       
