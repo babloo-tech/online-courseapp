@@ -92,7 +92,6 @@ app.post('/add-video',(req,res)=>{
 
   mongoClient.connect(DB_URL).then(clientObj=>{
     clientObj.db('video-project').collection('tblvideos').insertOne(video).then(()=>{
-      console.log('Video Added...')
       res.end();
     })
   })
@@ -114,7 +113,6 @@ app.put('/edit-video/:id',(req,res)=>{
 
   mongoClient.connect(DB_URL).then(clientObj=>{
     clientObj.db('video-project').collection("tblvideos").updateOne({video_id:id},{$set:video}).then(()=>{
-      console.log('Video Updated...')
       res.end()
     })
   })
@@ -125,7 +123,6 @@ app.delete('/delete-video/:id',(req,res)=>{
 
   mongoClient.connect(DB_URL).then(clientObj=>{
     clientObj.db('video-project').collection('tblvideos').deleteOne({video_id:id}).then(()=>{
-      console.log('Video Deleted...')
       res.end()
     })
   })
