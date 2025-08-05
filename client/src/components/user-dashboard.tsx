@@ -32,8 +32,12 @@ export function UserDashboard() {
   }, [])
 
   function UserSignout() {
+  const confirmed = confirm("Are you sure you want to logout?");
+  if(confirmed){
     removeCookie('userid')
     navigate('/')
+  }
+   
   }
 
   function handleSaveClick(video: VideoContract) {
@@ -46,7 +50,7 @@ export function UserDashboard() {
       
       <header className="d-flex justify-content-between p-2 fixed-top   ">
         <h4 id='head-manage' className="mt-4 ms-2 bi bi-person-fill ">{cookie['userid']}-Dashboard</h4>
-        <div> <button style={{ marginLeft: '1050px' }} type="submit" onClick={UserSignout} className="btn tbn-link btn-lg">
+        <div> <button style={{ marginLeft: '1300px' }} type="submit" onClick={UserSignout} className="btn tbn-link btn-lg">
           <img id='logout-set' src="./logout.jpg" width="40" height="40" className='mt-2' />
         </button>
         </div>

@@ -54,12 +54,17 @@ const[color,setColor]=useState('')
 
  function handleonBlur(){
   setUserMsg('')
-
  }
+
+ function handleCancel(){
+  navigate("/")
+ }
+
   return(
    <div className='d-flex justify-content-center  mx-4 '>
        
        <form onSubmit={formik.handleSubmit} className='p-4 ms-3 mt-4 bg-warning rounded-2 text-black' style={{width:'350px'}}>
+         <button type="button" onClick={handleCancel} className="btn-close float-end btn btn-danger p-2" data-bs-dismiss="modal"></button>
         <dl >
         <h2 className='bi bi-person-fill p-2 rounded-4 '>User Register</h2>
           <dt>User Id</dt>

@@ -25,8 +25,11 @@ export function AdminDashboard(){
   },[])
 
   function handeleSignout(){
-    removeCookie('admin_id')
-    navigate('/')
+    const confirmed = confirm("Are you sure you want to logout?");
+    if(confirmed){
+       removeCookie('admin_id')
+       navigate('/')
+    }
   }
 
 
