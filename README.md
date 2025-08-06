@@ -1,7 +1,13 @@
-# 🎓 Online Course App (MERN + TypeScript)
+# Online Course App (MERN + TypeScript)
 
-A full-stack online course platform built with **MERN Stack (MongoDB, Express, React, Node.js)**. The app provides two main modules: **Admin** and **User**.
+### Project Description
+**The Online Course App*** is a full-stack web application built using the ***MERN stack (MongoDB, Express.js, React.js, Node.js) with TypeScript** for both frontend and backend. The platform enables users to register, browse, and enroll in video-based courses, while providing a separate admin interface for managing users, courses, and content.
+This application is divided into two main modules:
 
+### User Module 
+– Allows students to register, log in, view and purchase courses, watch video lessons, and track their learning progress.
+### Admin Module
+– Allows administrators to manage the entire platform including users, course content, and reports through a secure dashboard.
 ## 🔗 Live Demo
 [https://online-courseapp.vercel.app/](#) 
 
