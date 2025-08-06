@@ -15,11 +15,14 @@ export function UserDashboard() {
   const [cookie, ,removeCookie] = useCookies(['userid'])
   let navigate = useNavigate()
 
+ const [allVideos, setAllVideos] = useState<VideoContract[]>([]);
   const [videos, setVideos] = useState<VideoContract[]>()
+  const[searchTerm,setSearchTerm]=useState('')
 
-  function LoadVideos() {
+    function LoadVideos() {
     axios.get(`${BACKEND_URL}/get-videos`).then((response) => {
-      setVideos(response.data)
+       setAllVideos(response.data)
+       setVideos(response.data)
     })
   }
 
@@ -45,12 +48,33 @@ export function UserDashboard() {
   }
 
 
+ function handleClickSearch(e:any) {
+  e.preventDefault();
+  if (searchTerm.trim()==='') {
+    setVideos(allVideos);
+  } else {
+    if (searchTerm.trim().length >= 5) {
+      const result = allVideos.filter((video) =>
+        video.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setVideos(result);
+     }
+  }
+ }
+
+
   return (
     <div>
       
-      <header className="d-flex justify-content-between p-2 fixed-top   ">
-        <h4 id='head-manage' className="mt-4 ms-2 bi bi-person-fill ">{cookie['userid']}-Dashboard</h4>
-        <div> <button style={{ marginLeft: '1300px' }} type="submit" onClick={UserSignout} className="btn tbn-link btn-lg">
+      <header className="d-flex justify-content-between p-2 fixed-top">
+        <h5 className=" ms-5  bi bi-person-fill ">{cookie['userid']}-Dashboard
+            <form  method='get' className='input-group mt-3  ms-2' style={{paddingTop:'25px',width:'300px'}}>
+          <input onKeyUp={handleClickSearch} name='search' onChange={(e)=>setSearchTerm(e.target.value)}  className='form-control' type="text" />
+          <button onClick={handleClickSearch} className='bi bi-search btn btn-warning' > </button>
+        </form>
+        </h5>
+      
+        <div> <button style={{ marginLeft: '1000px' }} type="submit" onClick={UserSignout} className="btn tbn-link btn-lg">
           <img id='logout-set' src="./logout.jpg" width="40" height="40" className='mt-2' />
         </button>
         </div>

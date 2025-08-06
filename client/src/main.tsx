@@ -4,8 +4,8 @@ import store from './store/store.tsx';
 import { Provider } from 'react-redux';
 
 import App from './App.tsx'
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
 import { CookiesProvider } from 'react-cookie'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
