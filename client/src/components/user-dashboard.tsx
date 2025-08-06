@@ -68,7 +68,7 @@ export function UserDashboard() {
       
       <header className="d-flex justify-content-between p-2 fixed-top">
         <h5 className=" ms-5  bi bi-person-fill ">{cookie['userid']}-Dashboard
-            <form  method='get' className='input-group mt-3  ms-2' style={{paddingTop:'25px',width:'300px'}}>
+            <form  method='get' className='input-group mt-3  ms-2' style={{paddingTop:'22px',width:'300px'}}>
           <input onKeyUp={handleClickSearch} name='search' onChange={(e)=>setSearchTerm(e.target.value)}  className='form-control' type="text" />
           <button onClick={handleClickSearch} className='bi bi-search btn btn-warning' > </button>
         </form>
