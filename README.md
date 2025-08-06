@@ -65,29 +65,35 @@ This application is divided into two main modules:
       cd online-courseapp
    
 2. **Install backend dependencies**
-    - cd server
-    - npm install
+     ```bash
+        cd server
+        npm install
 
  
-3. **Install backend dependencies**
-    - cd ../client
-    - npm install
+4. **Install backend dependencies**
+     ```bash
+        cd client
+        npm install
 
-4. **Set up environment variables**
+6. **Set up environment variables**
     - **Create .env files in both server/ and client/ folders:**
-      **Server .env**
-     - PORT=5000
-     - MONGODB_URL=your_mongodb_connection
+      = Server .env
+       ```bash
+          PORT=5000
+          MONGODB_URL=your_mongodb_connection
 
-      **Client .env**
-     - BACKEND_URL=http://localhost:5050
-5. **Run the app**
+      - Client .env
+        ```bash
+           BACKEND_URL=http://localhost:5050
+8. **Run the app**
  - **Backend**
-      - cd server
-      - npm run server
+ -   ```bash
+        cd server
+        npm run server
  - **Frontend**
-      - cd client
-      - npm run dev
+      ```bash
+         cd client
+         npm run dev
 
 ### 🧪 Future Improvements
       - Payment Integration (Razorpay/Stripe)
