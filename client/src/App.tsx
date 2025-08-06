@@ -19,7 +19,7 @@ function App() {
     <div>
       <BrowserRouter>
        <Link to={'/'} className='text-decoration-none'><header className='bg-primary  p-3 text-center position-sticky top-0  z-1'>
-          <h2 id='main-head' style={{padding:'23px'}} className=' text-white fw-bold text-decoration-none bi bi-person-video '> Online Video Application</h2>
+          <h2 id='main-head' style={{padding:'22px'}} className=' text-white fw-bold text-decoration-none bi bi-person-video '> Online Video Application</h2>
        </header></Link>
        <section>
            <Routes>
