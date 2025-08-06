@@ -3,7 +3,7 @@
 A full-stack online course platform built with **MERN Stack (MongoDB, Express, React, Node.js)**. The app provides two main modules: **Admin** and **User**.
 
 ## 🔗 Live Demo
-[https://online-courseapp.vercel.app](#) *(Add your deployed URL here)
+[https://online-courseapp.vercel.app/](#) 
 
 ---
 
@@ -25,16 +25,8 @@ A full-stack online course platform built with **MERN Stack (MongoDB, Express, R
 
 ---
 
-## 📸 Screenshots
 
-*(Add screenshots here if you have any. Example below)*
-
-![Homepage](./screenshots/homepage.png)
-![Admin Dashboard](./screenshots/admin-dashboard.png)
-
----
-
-## ⚙️ Tech Stack
+### ⚙️ Tech Stack
 
 ### Frontend:
 - React.js
@@ -63,6 +55,42 @@ A full-stack online course platform built with **MERN Stack (MongoDB, Express, R
 
 1. **Clone the repo**
    ```bash
+      https://github.com/babloo-tech/online-courseapp.git
+      cd online-courseapp
    
-   cd your-repo-name
+2. **Install backend dependencies**
+    - cd server
+    - npm install
+
+ 
+3. **Install backend dependencies**
+    - cd ../client
+    - npm install
+
+4. **Set up environment variables**
+    - **Create .env files in both server/ and client/ folders:**
+      **Server .env**
+     - PORT=5000
+     - MONGODB_URL=your_mongodb_connection
+
+      **Client .env**
+     - BACKEND_URL=http://localhost:5050
+5. **Run the app**
+ - **Backend**
+      - cd server
+      - npm run server
+ - **Frontend**
+      - cd client
+      - npm run dev
+
+### 🧪 Future Improvements
+      - Payment Integration (Razorpay/Stripe)
+      - Course Review & Rating System
+      - Admin Role Management
+      - Notification System
+
+
+   
+
+
 
