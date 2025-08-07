@@ -60,8 +60,8 @@ export function AddVideo(){
         <dd className='col-8 '>
            <select name='category_id' className='form-select' onChange={formik.handleChange}>
              {
-              categories?.map(category=>
-              <option  key={category.category_id} value={category.category_id}>{category.category_name}</option>)
+              categories?.map((category,index)=>
+              <option  key={index} value={category.category_id}>{category.category_name}</option>)
              }
            </select>
         </dd>

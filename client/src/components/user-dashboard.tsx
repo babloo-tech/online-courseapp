@@ -86,10 +86,10 @@ export function UserDashboard() {
         </h2>
     
       </header>
-      <section className=" z-0 d-flex flex-wrap gap-0 justify-content-evenly mt-5 mx-4">
+      <section className=" z-0 d-flex flex-wrap gap-2 mt-5 mx-4">
         {videos?.map((video) => (
           <div  key={video.category_id} className="card m-2 " style={{ maxWidth: '340px' }}>
-            <iframe  src={video.url} height="200" w-100 className='rounded '></iframe>
+            <iframe  src={video.url} height="200"  className='rounded '></iframe>
             <div className="card-header text-center">
               <h2>{video.title}</h2>
             </div>

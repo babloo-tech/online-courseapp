@@ -41,7 +41,7 @@ let params=useParams()
   function LoadCategories(){
     axios.get(`${BACKEND_URL}/get-categories`)
     .then(response=>{
-      response.data.unshift({category_id:-1,category_name:'Select Category'})
+      response.data.unshift({category_id:0, category_name:'Select Category'})
      setCategories(response.data)
 
     })
@@ -51,7 +51,6 @@ let params=useParams()
     axios.get(`${BACKEND_URL}/get-video/${params.id}`)
     .then(response=>{
       setVideos(response.data)
-      console.log(response)
     })
   }
 
@@ -84,8 +83,8 @@ let params=useParams()
            <select onChange={formik.handleChange} className='form-select' name='category_id' value={formik.values.category_id} >
         
              {
-              categories?.map(category=>
-              <option key={category.category_id} value={category.category_id}>{category.category_name}</option>)
+              categories?.map((category)=>
+              <option key={category.category_id} value={category.category_name}>{category.category_name}</option>)
             
              }
            </select>
