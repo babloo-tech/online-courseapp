@@ -16,10 +16,10 @@ export function UserLogin(){
       onSubmit:(user)=>{
         axios.get(`${BACKEND_URL}/get-users`)
         .then(response=>{
-          let result=response.data.find((item:any)=>item.user_id===user.user_id)
+          let result=response.data.find((item:any)=>item.user_id===user.user_id.trim())
           
            if(result){
-             if(result.password===user.password){
+             if(result.password===user.password.trim()){
                setCookie('userid',user.user_id)
                 navigate('/user-dashboard')
              }

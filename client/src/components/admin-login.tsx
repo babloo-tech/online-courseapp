@@ -13,9 +13,9 @@ export function AdminLogin(){
      onSubmit:(admin:any)=>{
        axios.get(`${BACKEND_URL}/get-admin`)
        .then(response=>{
-        let result=response.data.find((item:any)=>item.admin_id===admin.admin_id)
+        let result=response.data.find((item:any)=>item.admin_id===admin.admin_id.trim())
         if(result){
-          if(result.password===admin.password){
+          if(result.password===admin.password.trim()){
              navigate('/admin-dashboard')
           }else{
             alert('Invalid Password')
