@@ -37,7 +37,7 @@ export function AdminDashboard(){
     <div className="p-3 z-2">
          <header id="head-h" className="d-flex justify-content-between fixed-top p-4">
          <h3 id="font-f1"> <span className="bi bi-lock bg-danger rounded-3 px-2 "></span> Admin Dashboard</h3>
-         <button id="btn-b" className="btn  btn-lg text-decoration-none" onClick={handeleSignout}><img id="log" src="logout.jpg" width='50' height='40' /></button>
+         <button id="btn-b" className="btn  btn-primary" onClick={handeleSignout}><img id="log" src="logout.jpg" width='50' height='50' /></button>
          </header>
          <section className="fs-5  ">
           <Link to="/add-video" className="btn btn-warning btn-lg bi bi-camera-video "> Add New Video</Link>

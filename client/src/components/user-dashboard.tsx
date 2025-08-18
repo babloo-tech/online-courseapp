@@ -89,10 +89,11 @@ export function UserDashboard() {
 
         <div>
           <button
+            
             style={{ marginLeft: '1000px' }}
             type="submit"
             onClick={userSignout}
-            className="btn tbn-link btn-lg"
+            className="btn tbn-link btn-lg btn-primary"
           >
             <img
               id="logout-set"
@@ -140,7 +141,7 @@ export function UserDashboard() {
               <span className="bi bi-eye mx-4">{video.views}</span>
               <button
                 onClick={() => handleSaveClick(video)}
-                className="btn btn-success mt-1"
+                className="btn btn-success mt-1  "
                 style={{ marginLeft: '75px' }}
               >
                 <span className="bi bi-floppy me-2"></span>

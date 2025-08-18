@@ -84,7 +84,7 @@ let params=useParams()
         
              {
               categories?.map((category)=>
-              <option key={category.category_id} value={category.category_name}>{category.category_name}</option>)
+              <option key={category.category_id} value={category.category_id}>{category.category_name}</option>)
             
              }
            </select>
