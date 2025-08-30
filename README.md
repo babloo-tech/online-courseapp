@@ -1,4 +1,4 @@
-# Online Course App (MERN + TypeScript)
+# Online Course App (MERN with TypeScript)
 
 ### Project Description
 **The Online Course App** is a full-stack web application built using the ***MERN stack (MongoDB, Express.js, React.js, Node.js) with TypeScript** for both frontend and backend. The platform enables users to register, browse, and enroll in video-based courses, while providing a separate admin interface for managing users, courses, and content.
