@@ -15,6 +15,9 @@ import './cart.css';
 export function UserDashboard() {
   const dispatch = useDispatch();
   const videosCount = useSelector((state: RootState) => state.video.videosCount);
+  const saveVideo = useSelector((state: RootState) => state.video.videos);
+
+  const [showWatchLater, setShowWatchLater] = useState(false);
 
   const [cookie, , removeCookie] = useCookies(['userid']);
   const navigate = useNavigate();
@@ -22,6 +25,11 @@ export function UserDashboard() {
   const [allVideos, setAllVideos] = useState<VideoContract[]>([]);
   const [videos, setVideos] = useState<VideoContract[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+
+  const videosToRender = showWatchLater ? saveVideo : videos;
+
+
 
   useEffect(() => {
     if (!cookie['userid']) {
@@ -67,13 +75,8 @@ export function UserDashboard() {
       <header className="d-flex justify-content-between p-2 fixed-top">
         <h5 className="ms-5 bi bi-person-fill">
           {cookie['userid']}-Dashboard
-          <form
-            method="get"
-            className="input-group mt-3 ms-2"
-            style={{ paddingTop: '20px', width: '300px' }}
-          >
-            <input
-              onKeyUp={handleClickSearch}
+          <form method="get" className="input-group mt-3 ms-" style={{ paddingTop: '23px', width: '280px' }}>
+            <input onKeyUp={handleClickSearch}
               placeholder="Search video...."
               name="search"
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -82,66 +85,49 @@ export function UserDashboard() {
             />
             <button
               onClick={handleClickSearch}
-              className="bi bi-search btn btn-warning"
-            ></button>
+              className="bi bi-search btn btn-warning">
+             </button>
           </form>
         </h5>
-
         <div>
-          <button
-            
-            style={{ marginLeft: '1000px' }}
-            type="submit"
-            onClick={userSignout}
-            className="btn tbn-link btn-lg btn-primary"
-          >
+          <button style={{ marginLeft: '900px' }} type="submit" onClick={userSignout}
+            className="btn tbn-link btn-lg btn-primary ">
             <img
               id="logout-set"
               src="./logout.jpg"
-              width="40"
-              height="40"
-              className="mt-2"
+              width="30"
+              height="30"
+              className="mt-3"
             />
           </button>
         </div>
 
-        <h2 className="mt-3">
-          <button className="bi bi-cart4  btn btn-primary fs-3 ">{videosCount}</button>
+        <h2  className="mt-3 ">
+          <button
+          id='watch'
+          onClick={() => setShowWatchLater(!showWatchLater)}
+          className="btn btn-warning me-5  p-1">
+          {showWatchLater ? `All Videos` : ` Watch Later ${videosCount}`}
+        </button>
         </h2>
       </header>
 
-      <section
-        id="main-card"
-        className="z-0 d-flex flex-wrap gap-2 mt-5 mx-4"
-      >
-        {videos?.map((video) => (
-          <div
-            key={video.category_id}
-            className="card m-2"
-            style={{ maxWidth: '340px' }}
-          >
-            <iframe
-              src={video.url}
-              height="200"
-              className="rounded"
-            ></iframe>
+ <section className="z-0 d-flex flex-wrap gap-2 mt-5 mx-4">
+        {videosToRender?.map((video) => (
+          <div key={video.category_id} className="card m-2" style={{ maxWidth: '340px' }}>
+            <iframe src={video.url} height="200" className="rounded"></iframe>
             <div className="card-header text-center">
               <h2>{video.title}</h2>
             </div>
-            <div className="card-body text-center">
-              {video.description}
-            </div>
+            <div className="card-body text-center">{video.description}</div>
             <div className="card-footer">
-              <span
-                style={{ marginLeft: '75px' }}
-                className="bi bi-hand-thumbs-up"
-              >
+              <span style={{ marginLeft: '75px' }} className="bi bi-hand-thumbs-up">
                 {video.likes}
               </span>
               <span className="bi bi-eye mx-4">{video.views}</span>
               <button
                 onClick={() => handleSaveClick(video)}
-                className="btn btn-success mt-1  "
+                className="btn btn-success mt-1"
                 style={{ marginLeft: '75px' }}
               >
                 <span className="bi bi-floppy me-2"></span>
@@ -150,8 +136,10 @@ export function UserDashboard() {
             </div>
           </div>
         ))}
-      </section>
+  </section>
     </div>
   );
 }
+
+
 

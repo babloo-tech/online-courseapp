@@ -29,10 +29,42 @@
   @media(max-width:1300px) {
     #logout-set{
       position: absolute;
-      right: 0;
+      right: 8px;
       width: 25px;
       height: 25px;
       padding:2px;
+    }
+  }
+  @media(max-width:700px) {
+    #logout-set{
+      position: absolute;
+      right: 5px;
+      bottom: 25px;
+      width: 25px;
+      height: 25px;
+      padding:2px;
+    }
+  }
+
+  @media(max-width:1400px) {
+   h2 #watch{
+      position: absolute;
+      width: 120px;
+      right: 0px;
+      height: 30x;
+      margin: 10px;
+      padding:2px;
+    }
+  }
+  @media(max-width:700px) {
+   h2 #watch{
+      position: absolute;
+      width: 120px;
+      right: -45px;
+      top: -9px;
+      padding: 0px;
+     
+    
     }
   }
 

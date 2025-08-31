@@ -63,21 +63,21 @@ const[color,setColor]=useState('')
   return(
    <div className='d-flex justify-content-center  mx-4 '>
        
-       <form onSubmit={formik.handleSubmit} className='p-4 ms-3 mt-4 bg-warning rounded-2 text-black' style={{width:'350px'}}>
+       <form onSubmit={formik.handleSubmit} className='p-4 ms-3 mt-4 bg-light rounded-2 text-black' style={{width:'350px'}}>
          <button type="button" onClick={handleCancel} className="btn-close float-end btn btn-danger p-2" data-bs-dismiss="modal"></button>
         <dl >
         <h2 className='bi bi-person-fill p-2 rounded-4 '>User Register</h2>
           <dt>User Id</dt>
-          <dd><input placeholder='Enter id....' type="text" required  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
+          <dd><input placeholder='enter id....' type="text" autoFocus required  className='form-control' onBlur={handleonBlur} onKeyUp={VerifyUser}  onChange={formik.handleChange}  name='user_id'/></dd>
           <dd className={color}>{userMsg}</dd>
           <dt>User Name</dt>
-          <dd><input placeholder='Enter name' type="text" required className='form-control' onChange={formik.handleChange}  name='user_name'/></dd>
+          <dd><input placeholder='enter name' type="text" required className='form-control' onChange={formik.handleChange}  name='user_name'/></dd>
           <dt>Password</dt>
-          <dd><input placeholder='Enter password' type="password" required  className='form-control' onChange={formik.handleChange}  name='password'/></dd>
+          <dd><input placeholder='enter password' type="password" required  className='form-control' onChange={formik.handleChange}  name='password'/></dd>
           <dt>Email</dt>
-          <dd><input placeholder='Enter email' type="email" required className='form-control' onChange={formik.handleChange}  name='email'/></dd>
+          <dd><input placeholder='enter email' type="email" required className='form-control' onChange={formik.handleChange}  name='email'/></dd>
           <dt>Mobile</dt>
-          <dd><input placeholder='Enter mobile no' type="text" required  className='form-control' onChange={formik.handleChange}  name='mobile'/></dd>
+          <dd><input placeholder='enter mobile no' type="text" required  className='form-control' onChange={formik.handleChange}  name='mobile'/></dd>
         </dl>
         <button className='btn btn-primary mb-2' >Register</button>
         <div>
