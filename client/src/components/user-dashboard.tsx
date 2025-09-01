@@ -13,15 +13,17 @@ import './user-dashboard.css';
 import './cart.css';
 
 export function UserDashboard() {
+  const navigate = useNavigate();
+  const [cookie, , removeCookie] = useCookies(['userid']);
+
+  // use redux state
   const dispatch = useDispatch();
   const videosCount = useSelector((state: RootState) => state.video.videosCount);
   const saveVideo = useSelector((state: RootState) => state.video.videos);
-
   const [showWatchLater, setShowWatchLater] = useState(false);
 
-  const [cookie, , removeCookie] = useCookies(['userid']);
-  const navigate = useNavigate();
 
+  //search button created
   const [allVideos, setAllVideos] = useState<VideoContract[]>([]);
   const [videos, setVideos] = useState<VideoContract[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,13 +32,14 @@ export function UserDashboard() {
   const videosToRender = showWatchLater ? saveVideo : videos;
 
 
-
+  // protect route
   useEffect(() => {
-    if (!cookie['userid']) {
-      navigate('/user-login');
-    } else {
-      loadVideos();
-    }
+    // if (!cookie['userid']) {
+    //   navigate('/user-login');
+    // } else {
+      
+    // }
+    loadVideos();
   }, []);
 
   const loadVideos = () => {
@@ -46,7 +49,7 @@ export function UserDashboard() {
     });
   };
 
-  const handleSaveClick = (videos: VideoContract) => { // parameter event
+  const handleSaveClick = (videos: VideoContract) => { // event parameter
     dispatch(addToSavedList(videos));
   };
 
@@ -55,7 +58,7 @@ export function UserDashboard() {
     e.preventDefault();
     if (!searchTerm.trim()) {
       setVideos(allVideos);
-    } else if (searchTerm.trim().length >= 5) {
+    } else if (searchTerm.trim().length >= 3) {
       const result = allVideos.filter((video) =>
         video.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -73,9 +76,8 @@ export function UserDashboard() {
   return (
     <div>
       <header className="d-flex justify-content-between p-2 fixed-top">
-        <h5 className="ms-5 bi bi-person-fill">
-          {cookie['userid']}-Dashboard
-          <form method="get" className="input-group mt-3 ms-" style={{ paddingTop: '23px', width: '280px' }}>
+        <h5 className="ms-5 bi bi-person-fill"> {cookie['userid']}-Dashboard
+          <form method="get" className="input-group mt-3 ms-1" style={{ paddingTop: '23px', width: '280px' }}>
             <input onKeyUp={handleClickSearch}
               placeholder="Search video...."
               name="search"
